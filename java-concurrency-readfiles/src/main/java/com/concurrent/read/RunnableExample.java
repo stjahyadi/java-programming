@@ -9,6 +9,7 @@ public class RunnableExample {
 	}
 
 	public static void execute() {
+		// create tasks
 		List<RunnableTask> tasks = new ArrayList<>();
 		List<Thread> threads = new ArrayList<>();
 		for (int i = 0; i < 5; i++) {
@@ -20,6 +21,7 @@ public class RunnableExample {
 		}
 
 		try {
+			// wait for threads to finish
 			for (int i = 0; i < 5; i++) {
 				threads.get(i).join();
 			}
